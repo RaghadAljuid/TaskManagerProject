@@ -1,0 +1,52 @@
+/* خلفية الصفحة */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('background.jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* حاوية المحتوى */
+  .container {
+    background-color: rgba(0, 0, 0, 0.6); /* شفافية خلفية */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* العنوان */
+  h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  /* الفقرة */
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  
+  /* الأزرار */
+  .buttons .btn {
+    background-color: #2196F3;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-weight: bold;
+  }
+  
+  .buttons .btn:hover {
+    background-color: #0b7dda;
+  }
+  

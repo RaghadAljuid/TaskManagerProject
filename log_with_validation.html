@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Login</h1>
+
+    <form action="login.php" method="post" onsubmit="return validateLogin()">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <p>Don't have an account? <a href="Register.html">Register now</a></p>
+  </div>
+
+   <script>
+    function validateLogin() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      if (!email.includes("@")) {
+        alert("Email must contain '@'");
+        return false;
+      }
+
+      const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+      if (!passwordRegex.test(password)) {
+        alert("Password must be at least 8 characters and include an uppercase letter, a number, and a special character (!@#$%^&*)");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+  </body>
+</html>

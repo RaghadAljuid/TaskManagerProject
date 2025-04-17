@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Add New Task</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Add a New Task</h1>
+
+    <form action="add_task.php" method="post">
+      <label for="title">Task Title:</label><br>
+      <input type="text" id="title" name="title" required><br><br>
+
+      <label for="description">Task Description:</label><br>
+      <textarea id="description" name="description" required></textarea><br><br>
+
+      <label for="due_date">Due Date:</label><br>
+      <input type="date" id="due_date" name="due_date" required><br><br>
+
+      <label for="priority">Priority:</label><br>
+      <select id="priority" name="priority" required>
+        <option value="">-- Select Priority --</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select><br><br>
+
+      <input type="submit" value="Save Task">
+    </form>
+
+    <br>
+    <a href="dashboard.html">Back to Task Dashboard</a>
+  </div>
+
+</body>
+</html>
